@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+    --primary: #EF5B0C;
+    --gray: hsl(215, 20%, 65%);
+    --bg-body: #FCF9EA;
+    --paragraph-color: rgb(51, 65, 85);
+    --dark: hsl(222, 47%, 11%);
+    --card-color: #FFF;
+    --header: #003865;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    background-color: var(--bg-body);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--paragraph-color);
+}
+
+main {
+    margin-top: 20px;
+}
+
+.headbar {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--header);
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2em;
+    column-gap: 10px;
+    margin-top: 30px;
+}
+.grid-container1 {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    row-gap: 2em;
+    column-gap: 10px;
+    margin-top: 30px;
+}      
+
+
+.form-container {
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    padding: 1rem;
+    background: var(--card-color);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(15, 23, 42, 0.1);
+}
+
+
+.form-container .title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    border: 1px solid var(--gray);
+    padding: 0.5em;
+    border-radius: 00.5em;
+    width: 100%;
+    font-size: 1em;
+    outline: none;
+}
+
+.form-group label {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: transparent;
+    transition: 0.3s;
+    cursor: text;
+}
+
+.form-group input {
+    border: 2px solid var(--primary);
+}
+.form-group input:focus {
+    border: 2px solid var(--header);
+}
+
+.form-group input:focus ~ label {
+    top: 0;
+    left: 0.75rem;
+    color: var(--primary);
+    padding: 0 0.25rem;
+    background-color: white;
+    font-size: 12px;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.form-check label {
+    color: var(--header);
+}
+
+.form-check input,
+.form-check label {
+    cursor: pointer;
+}
+
+.submit_btn,
+.return_btn,
+.delete_btn,
+.edit_btn,
+.finish_btn,
+.reset_btn {
+    border: none;
+    outline: none;
+    background-color: var(--primary);
+    color: white;
+    float: right;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 3px;
+    margin-bottom: 3px;
+}
+
+.submit_btn:hover,
+.return_btn:hover,
+.delete_btn:hover,
+.edit_btn:hover,
+.finish_btn:hover,
+.reset_btn:hover {
+    background-color: hsl(217, 91%, 50%);
+}
+
+
+.alert_done,
+.alert_finish,
+.alert_move,
+.alert_delete {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    color: #FFF;
+    z-index: 100;
+    transition: 0.5s;
+}
+
+.alert_done {
+    background-color: green;
+}
+
+.alert_finish {
+    background-color: blue;
+}
+
+.alert_move {
+    background-color: rgb(250, 142, 0);
+}
+
+.alert_delete {
+    background-color: red;
+}
+
+.item {
+border: 1px solid var(--primary);
+border-radius: 0.5rem;
+padding: 0.5rem 1rem;
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 0.5rem;
+}
+
+
+.item-title {
+    color: var(--header);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.item-title span {
+    color: var(--paragraph-color);
+}
+
+.item-writter {
+    color: orangered;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.item-action {
+    display: flex;
+    gap: 0.25rem;
+    color: green;
+}
+
+.hidden {
+    display: none;
+}
+
+
+@media only screen and (max-width:992px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .grid-container1 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    } 
+}
+
+@media only screen and (max-width:768px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .grid-container1 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    } 
+}

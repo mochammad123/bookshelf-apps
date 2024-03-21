@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf Apps</title>
+  </head>
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+  <body>
+    <header class="headbar">
+      <h2 class="title">Bookshelf Apps</h2>
+    </header>
+    <div class="grid-container">
+      <div class="form-container">
+        <h2 class="title">Tambah Buku Baru</h2>
+        <form id="inputBook" action="" method="post">
+          <div class="grid-container1">
+            <div class="form-group">
+              <input
+                id="inputBookTitle"
+                type="text"
+                placeholder="Judul"
+                autofocus
+                required
+              />
+              <label for="inputBookTitle">Judul</label>
+            </div>
+
+            <div class="form-group">
+              <input
+                id="inputBookAuthor"
+                type="text"
+                placeholder="Penulis"
+                required
+              />
+              <label for="inputBookAuthor">Penulis</label>
+            </div>
+            <div class="form-group">
+              <input
+                id="inputBookYear"
+                type="number"
+                placeholder="Tahun"
+                required
+              />
+              <label for="inputBookYear">Tahun</label>
+            </div>
+          </div>
+          <div class="form-check">
+            <label for="inputBookIsComplete">Selesai dibaca</label>
+            <input id="inputBookIsComplete" type="checkbox" />
+          </div>
+          <button type="submit" class="submit_btn">
+            <i class="bx bx-book-add bx-xs"></i>
+          </button>
+        </form>
+      </div>
+      <div class="form-container">
+        <h2 class="title">Cari Buku</h2>
+        <form id="formSearch" action="" method="post">
+          <div class="form-group">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Cari Buku"
+            />
+            <label for="search">Cari Buku</label>
+          </div>
+          <div class="form-search-bottom">
+            <button type="submit" class="submit_btn">
+              <i class="bx bx-search-alt bx-xs"></i>
+            </button>
+            <button type="reset" class="reset_btn">
+              <i class="bx bx-reset bx-xs"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="form-container">
+        <h2 class="title">Buku Belum Dibaca</h2>
+        <div id="unRead"></div>
+      </div>
+      <div class="form-container">
+        <h2 class="title">Buku Sudah Dibaca</h2>
+        <div id="alreadyRead"></div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
